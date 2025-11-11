@@ -7,6 +7,7 @@ import {
 import FormInput from "../form-input/form-input.component"
 import './sign-up-form.styles.scss'
 import Button from "../button/button.component"
+import SignInForm from "../sign-in-form/sign-in-form.component"
 
 // Create a form field object
 const defaultFormFields = {
@@ -97,8 +98,8 @@ const handleSubmit = async (event) => {
         <Button type="submit">Sign Up</Button>
       </form>
     </div>
-
   )
 }
 
 export default SignUpForm
+
