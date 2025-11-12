@@ -40,20 +40,18 @@ const resetFormFields = () => {
 
 // Handle with Google Sign In
  const signInWithGoogle = async () => {
-    const {user} = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user)
+    await signInWithGooglePopup();
   }
 
 // handle formsubmit
 const handleSubmit = async (event) => {
   event.preventDefault()
   try {
-    const response = await signInAuthUserWithEmailAndPassword(email, password)
-    console.log(response)
+    await signInAuthUserWithEmailAndPassword(email, password)
     resetFormFields(defaultFormFields)
   } catch(error) {
     if(error.code === 'auth/invalid-credential') {
-      alert('Invaid Credentail')
+      alert('Invaid Credential')
     }
   }}
 
